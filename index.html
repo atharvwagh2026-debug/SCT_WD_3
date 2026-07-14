@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tic-Tac-Toe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <!-- Title -->
+    <h1 class="title">⚔ Tic - Tac - Toe 🛡</h1>
+
+    <!-- Mode Switch -->
+    <div class="mode-switch">
+      <button class="mode-btn active" id="pvpBtn" data-mode="pvp">Player vs Player</button>
+      <button class="mode-btn" id="pvcBtn" data-mode="pvc">Player vs Computer</button>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="scoreboard">
+      <div class="score-card score-x">
+        <span class="score-label">Player X</span>
+        <span class="score-value" id="scoreX">0</span>
+      </div>
+      <div class="score-card score-draw">
+        <span class="score-label">Draws</span>
+        <span class="score-value" id="scoreDraw">0</span>
+      </div>
+      <div class="score-card score-o">
+        <span class="score-label" id="oLabel">Player O</span>
+        <span class="score-value" id="scoreO">0</span>
+      </div>
+    </div>
+
+    <!-- Status message -->
+    <div class="status" id="status">Player X's turn</div>
+
+    <!-- Game board -->
+    <div class="board-wrapper">
+      <div class="board" id="board">
+        <button class="cell" data-index="0"></button>
+        <button class="cell" data-index="1"></button>
+        <button class="cell" data-index="2"></button>
+        <button class="cell" data-index="3"></button>
+        <button class="cell" data-index="4"></button>
+        <button class="cell" data-index="5"></button>
+        <button class="cell" data-index="6"></button>
+        <button class="cell" data-index="7"></button>
+        <button class="cell" data-index="8"></button>
+
+        <!-- Winning line overlay, drawn with JS -->
+        <div class="win-line" id="winLine"></div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button class="btn btn-primary" id="restartBtn">Restart Round</button>
+      <button class="btn btn-secondary" id="resetScoreBtn">Reset Scores</button>
+    </div>
+
+    <!-- Credit -->
+    <p class="credit">Made by <span>Atharv</span></p>
+
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
